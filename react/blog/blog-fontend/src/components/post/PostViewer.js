@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import palette from '../../lib/styles/palette';
 import Responsive from '../common/Responsive';
+import SubInfo from '../common/SubInfo';
+import Tags from '../common/Tags';
 
 const PostViewerBlock = styled(Responsive)`
     margin-top: 4rem;
@@ -71,17 +73,12 @@ const PostViewer = ({post, error, loading}) => {
         <PostViewerBlock>
             <PostHead>
                 <h1>{title}</h1>
-                <SubInfo>
-                    <span>
-                        <b>{user.username}</b>
-                    </span>
-                    <span>{new Date(publishedDate).toLocaleDateString()}</span>
-                </SubInfo>
-                <Tags>
-                    {tags.map(tag => (
-                        <div className="tag">#{tag}</div>
-                    ))}
-                </Tags>
+                <SubInfo 
+                    username={user.username}
+                    publishedDate={publishedDate}
+                    hasMarginTop
+                />
+                <Tags tags={tags}/>
             </PostHead>
             <PostContent
                 dangerouslySetInnerHTML={{__html: body}}
