@@ -31,7 +31,7 @@ const PostListContainer = ({location, match}) => {
             posts={posts}
             showWriteButton={user}
         />
-    )
-}
+    );
+};
 
 export default withRouter(PostListContainer);
