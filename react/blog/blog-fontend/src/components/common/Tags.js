@@ -5,7 +5,7 @@ import palette from '../../lib/styles/palette';
 
 const TagsBlock = styled.div`
     margin-top: 0.5rem;
-    .tga{
+    .tag{
         display: inline-block;
         color: ${palette.cyan[7]};
         text-decoration: none;

@@ -45,7 +45,6 @@ const PostItem = ({post}) => {
     const { publishedDate, user, tags, title, body, _id} = post;
     return(
         <PostItemBlock>
-            {console.log(user)}
             <h2>
                 <Link to={`/@${user.username}/${_id}`}>{title}</Link>
             </h2>
