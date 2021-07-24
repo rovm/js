@@ -60,8 +60,8 @@ export const write = async ctx => {
   const {title, body, tags} = ctx.request.body;
   const post = new Post({
     title,
-    body,
-    tags: removeHtmlAndShorten(body, sanitizeOption),
+    body: removeHtmlAndShorten(body, sanitizeOption),
+    tags,
     user: ctx.state.user,
   });
   try{
