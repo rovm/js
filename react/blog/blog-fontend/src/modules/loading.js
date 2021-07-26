@@ -1,4 +1,3 @@
-import { load } from 'js-yaml';
 import { createAction, handleActions} from 'redux-actions';
 
 const START_LOADING = 'loading/START_LOADING';
@@ -15,7 +14,7 @@ export const startLoading = createAction(
 
 export const finishLoading = createAction(
     FINISH_LOADING,
-    resultType => resultType,
+    resultType => resultType,   
 );
 
 const initialState = {};

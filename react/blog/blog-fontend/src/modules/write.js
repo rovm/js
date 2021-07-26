@@ -9,7 +9,7 @@ const [
     WRITE_POST,
     WRITE_POST_SUCCESS,
     WRITE_POST_FAILURE,
-] = createRequestActionTypes('write/WRITE_POSt');
+] = createRequestActionTypes('write/WRITE_POST');
 
 export const initialize = createAction(INITIALIZE);
 export const changeField = createAction(CHANGE_FILED, ({key, value}) => ({

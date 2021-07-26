@@ -4,7 +4,6 @@ import 'quill/dist/quill.bubble.css';
 import styled from 'styled-components';
 import palette from '../../lib/styles/palette';
 import Responsive from '../common/Responsive';
-import { source } from '../../../node_modules/axe-core/axe';
 
 const EditorBlock = styled(Responsive)`
     /* 페이지 위아래 여백 지정*/
