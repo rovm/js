@@ -23,7 +23,7 @@ const PostViewerContainer = ({match}) => {
         };
     }, [dispatch, postId]);
 
-    return <PostViewer post={post} loading={loading} error={error} PostActionButtons={<PostActionButtons/>}/>;
+    return <PostViewer post={post} loading={loading} error={error} actionButtons={<PostActionButtons/>}/>;
 };
 
 export default withRouter(PostViewerContainer);
