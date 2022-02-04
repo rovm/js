@@ -40,3 +40,14 @@ function getTax(income: number): number {
 
 let yourTax = getTax(50000);
 console.log(yourTax);
+
+function calcTax(state: string, income: number, dependents: number): number | undefined{
+    if(state === 'NY'){
+        return income * 0.06 - dependents * 500;
+    } else if(state === 'NJ'){
+        return income * 0.05 - dependents * 300;
+    }
+}
+
+// let tax: number = calcTax('NJ', 50000, 'two');
+let tax: number = calcTax('NJ', 50000, 2)
