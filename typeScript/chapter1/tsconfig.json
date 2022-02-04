@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "noEmitOnError": true,
+        "target": "ES5",
+        "watch": true
+    }
+}
