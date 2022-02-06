@@ -13,7 +13,7 @@ let patient: Patient = {
     height: 5
 };
 
-//클래스 내 커스텀 타입 사용
+//2.2.2클래스 내 커스텀 타입 사용
 // class Person {
 //     firstName: string;
 //     lastName: string;
@@ -26,11 +26,30 @@ let patient: Patient = {
 // p.age = 25; 
 
 //생성자가 추가된 Person class
-class Person {
-    constructor(public firstName: string, public lastName: string, public age?: number){};
+// class Person {
+//     constructor(public firstName: string, public lastName: string, public age?: number){};
+// }
+
+// const p = new Person("john", "Smith");
+// console.log(p)
+// const e = new Person("john2", "Smith2", 25);
+// console.log(e)
+
+//2.2.3 인터페이스를 사용한 커스텀 타입
+interface Person {
+    firstName: string;
+    lastName: string;
+    age: number;
 }
 
-const p = new Person("john", "Smith");
-console.log(p)
-const e = new Person("john2", "Smith2", 25);
-console.log(e)
+function savePerson(person: Person): void{
+    console.log('Saving', person);
+}
+
+const p: Person = {
+    firstName: 'John',
+    lastName: 'Smith',
+    age: 25
+};
+
+savePerson(p);
