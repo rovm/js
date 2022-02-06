@@ -53,3 +53,4 @@ function padLeft(value, padding) {
 }
 console.log(padLeft('px', 10));
 console.log(padLeft('px', 'width'));
+//console.log(padLeft('px', true));
