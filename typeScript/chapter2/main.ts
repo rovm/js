@@ -50,4 +50,20 @@ function calcTax(state: string, income: number, dependents: number): number | un
 }
 
 // let tax: number = calcTax('NJ', 50000, 'two');
-let tax: number = calcTax('NJ', 50000, 2)
+let tax: number = calcTax('NJ', 50000, 2);
+
+function padLeft(value: string, padding: string | number): string{
+    if(typeof padding === 'number'){
+        return Array(padding + 1).join('') + value;
+    }
+
+    if(typeof padding === 'string'){
+        return padding + value;
+    }
+
+    throw new Error(`Expected string or number, gopt '${padding}'.`);
+}
+
+console.log(padLeft('px', 10));
+console.log(padLeft('px', 'width'));
+//console.log(padLeft('px', true));

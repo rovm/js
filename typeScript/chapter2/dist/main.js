@@ -42,3 +42,14 @@ function calcTax(state, income, dependents) {
 }
 // let tax: number = calcTax('NJ', 50000, 'two');
 var tax = calcTax('NJ', 50000, 2);
+function padLeft(value, padding) {
+    if (typeof padding === 'number') {
+        return Array(padding + 1).join('') + value;
+    }
+    if (typeof padding === 'string') {
+        return padding + value;
+    }
+    throw new Error("Expected string or number, gopt '".concat(padding, "'."));
+}
+console.log(padLeft('px', 10));
+console.log(padLeft('px', 'width'));
