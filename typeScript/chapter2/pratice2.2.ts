@@ -36,20 +36,58 @@ let patient: Patient = {
 // console.log(e)
 
 //2.2.3 인터페이스를 사용한 커스텀 타입
-interface Person {
-    firstName: string;
-    lastName: string;
-    age: number;
-}
+// interface Person {
+//     firstName: string;
+//     lastName: string;
+//     age: number;
+// }
 
-function savePerson(person: Person): void{
-    console.log('Saving', person);
-}
+// function savePerson(person: Person): void{
+//     console.log('Saving', person);
+// }
 
-const p: Person = {
-    firstName: 'John',
-    lastName: 'Smith',
-    age: 25
-};
+// const p: Person = {
+//     firstName: 'John',
+//     lastName: 'Smith',
+//     age: 25
+// };
 
-savePerson(p);
+// savePerson(p);
+
+//2.2.4 구조적 타입 시스템과 명목적 타입 시스템
+ 
+//명목적 타입 시스템 
+/** JAVA
+ * class Person {
+ *  String name;
+ * }
+ * 
+ * class Customer {
+ *  String name;
+ * } 
+ * Customer cust = new Person(); 구문 오류: 왼쪽과 오른쪽의 class 이름이 같지 않다
+ **/ 
+
+//구조적타입 시스템
+// class Person {
+//     name: String;
+//     age: number;
+// }
+
+// class Customer {
+//     name: String;
+// }
+
+// const cust: Customer = new Person(); // 사용가능
+
+//구조적타입 시스템
+// class Person {
+//     name: String;
+// }
+
+// class Customer {
+//     name: String;
+//     age: number;
+// }
+
+// const cust: Customer = new Person(); // 사용불가
