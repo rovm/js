@@ -1,4 +1,4 @@
-var firstName;
+let firstName;
 //let age: number;
 /**
  * string : 문자열
@@ -10,8 +10,8 @@ var firstName;
  * never : 도달할 수 없는 코드를 나타냄
  * void : 값이 없음
  **/
-var odr = Symbol('orderID'); //새 symbol 생성
-var myOrder = {
+const odr = Symbol('orderID'); //새 symbol 생성
+const myOrder = {
     odr: "123"
 };
 console.log(myOrder['odr']);
@@ -26,11 +26,11 @@ function logError(errorMessage) {
     console.log(errorMessage);
 }
 logError("삐빅");
-var age = 25;
+const age = 25;
 function getTax(income) {
     return income * 0.15;
 }
-var yourTax = getTax(50000);
+let yourTax = getTax(50000);
 console.log(yourTax);
 function calcTax(state, income, dependents) {
     if (state === 'NY') {
@@ -41,7 +41,7 @@ function calcTax(state, income, dependents) {
     }
 }
 // let tax: number = calcTax('NJ', 50000, 'two');
-var tax = calcTax('NJ', 50000, 2);
+let tax = calcTax('NJ', 50000, 2);
 function padLeft(value, padding) {
     if (typeof padding === 'number') {
         return Array(padding + 1).join('') + value;
@@ -49,7 +49,8 @@ function padLeft(value, padding) {
     if (typeof padding === 'string') {
         return padding + value;
     }
-    throw new Error("Expected string or number, gopt '".concat(padding, "'."));
+    throw new Error(`Expected string or number, gopt '${padding}'.`);
 }
 console.log(padLeft('px', 10));
 console.log(padLeft('px', 'width'));
+//console.log(padLeft('px', true));

@@ -2,6 +2,7 @@
     "compilerOptions": {
         "outDir": "./dist",
         "noEmitOnError": true,
+        "target": "ES6",
         "lib" : ["dom", "ES6"]
     }
 }
